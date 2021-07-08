@@ -1,0 +1,25 @@
+{
+  "name": "@kda/tokens",
+  "version": "1.0.0",
+  "description": "Tokens for Design System",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "repository": "https://github.com/shenzhongkang/kda-tokens.git",
+  "author": "沈忠康 <shenzhongkang@idcos.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:clean && yarn build:lib && yarn generate",
+    "build:clean": "rm -rf lib",
+    "build:lib": "rollup -c",
+    "generate": "node ./scripts/generate.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "rollup": "^2.52.8",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.3.5"
+  }
+}
